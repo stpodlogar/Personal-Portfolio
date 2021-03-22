@@ -1,7 +1,36 @@
-header {
-    padding: 156px 0 100px;
-  }
-  
-  section {
-    padding: 150px 0;
-  }
+.home-banner {
+    padding: 256px 0 200px;
+    background-color: rebeccapurple;
+    opacity: 40%;
+}
+
+section {
+padding: 150px 0;
+}
+
+@media (min-width: 576px) {
+    .navbar-expand-sm .navbar-nav .nav-link {
+        padding: 0;
+    }
+}
+
+.main-header .navbar-nav > li > .nav-link span {
+    padding: 5px 20px;
+    background: transparent;
+    border-radius: 40px;
+    display: inline-block;
+    transition: ease all 0.2s;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.main-header .navbar-nav > li > .nav-link.active span {
+    background: rebeccapurple;
+    color: white;
+}
+
+.main-header .navbar-nav > li:hover > a span {
+    background-color: rebeccapurple;
+    color: white;
+}

@@ -23,7 +23,7 @@
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#main-nav',
-    offset: 56
+    offset: 66
   });
 
 })(jQuery); // End of use strict
