@@ -1,11 +1,20 @@
+:root {
+    --color-main: #f44336;
+    --color-alt: #ffebee;
+    --font-dark: black;
+    --typewriterSpeed: 4s;
+}
+
 .home-banner {
     padding: 256px 0 200px;
-    background-color: rebeccapurple;
-    opacity: 40%;
+    background-color: var(--color-alt);
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
 
 section {
-padding: 150px 0;
+    padding: 150px 0;
 }
 
 @media (min-width: 576px) {
@@ -26,11 +35,66 @@ padding: 150px 0;
 }
 
 .main-header .navbar-nav > li > .nav-link.active span {
-    background: rebeccapurple;
+    background: var(--color-main);
     color: white;
 }
 
 .main-header .navbar-nav > li:hover > a span {
-    background-color: rebeccapurple;
+    background-color: var(--color-main);
     color: white;
+}
+
+.home-banner h1 {
+    color: var(--font-dark);
+    font-family: 'Source Code Pro', monospace;
+    position: relative;
+}
+
+.home-banner h1::before,
+.home-banner h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.home-banner h1::before {
+    background: var(--color-alt);
+    animation: typewriter var(--typewriterSpeed) steps(14) 1s forwards;
+}
+
+.home-banner h1::after {
+    width: 0.125em;
+    background: black;
+    animation: 
+        typewriter var(--typewriterSpeed) steps(14) 1s forwards,
+        blink 750ms steps(14) infinite
+}
+
+.subtitle {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
