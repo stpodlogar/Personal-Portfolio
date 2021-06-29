@@ -21,14 +21,16 @@
 
     <header class="main-header">
       <!-- Navigation -->
-      <nav class="navbar navbar-light bg-light fixed-top navbar-expand-sm" id="main-nav" >
+      <nav class="navbar bg-transparent navbar-dark fixed-top navbar-expand-sm" id="main-nav">
         <!-- Container -->
-        <div class="container">
+        <div class="container py-2">
           <!-- Brand -->
           <a class="navbar-brand js-scroll-trigger" href="#page-top">STEVE.</a>
           <!-- Mobile Toggle -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button class="navbar-toggler custom-toggle" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="menu-btn">
+              <div class="menu-btn__burger"></div>
+            </div>
           </button>
           <div id="navbar-responsive" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
@@ -47,13 +49,28 @@
       </nav>
     </header>
 
-
-    <section class="home-banner">
-      <div class="container">
-        <h1>Hi, I'm Steve.</h1>
-        <p class="subtitle">Welcome to my portfolio</p>
-      </div>
-    </section>
+    <!-- Hero SVG -->
+    <div class="wave">
+      <svg width="100%" height="200px" fill="none" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <path 
+          fill="white" 
+          d="
+            M0 67
+            C 273,183
+              822,-41
+              1920.01,106 
+            V 359 
+            H 0 
+            V 67
+            Z">
+        </path>
+      </svg>
+    </div>
+    <div id="hero-container" class="home-banner">
+      <h1>Hi, I'm Steve.</h1>
+      <p class="subtitle">Welcome to my portfolio</p>
+    </div> 
 
     <section id="about" style="width: 100%; height: 500px;">
       <div class="container">
@@ -73,7 +90,7 @@
 
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Steve Podlogar</p>
       </div>
     </footer>
 

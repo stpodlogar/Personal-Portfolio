@@ -1,21 +1,67 @@
 :root {
-    --color-main: #f44336;
-    --color-alt: #ffebee;
-    --font-dark: black;
+    --color-main: #741ce8;
+    --color-alt: #2196f3;
+    --font-dark: rgba(0,0,0,.9);
     --typewriterSpeed: 4s;
+    --font-light: #ffffff;
 }
 
-.home-banner {
-    padding: 256px 0 200px;
-    background-color: var(--color-alt);
-    display: grid;
-    place-content: center;
-    text-align: center;
-}
+body{
+    height: 100%;
+    margin: 0;
+  }
+
+  div.wave{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    z-index: 99;
+  }
+  
+  .wave svg{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 200px;
+  }
+/*#B721FF*/
+/*hsla(218, 97%, 56%, 1)
+hsla(280, 84%, 41%, 1)*/
+  #hero-container {
+      position: relative;
+      /* background: linear-gradient(19deg, var(--color-main) 0%, #B721FF 100%); */
+      background: linear-gradient(to bottom,#7a19f1,#332179);
+      height: 70vh;
+  }
+
 
 section {
     padding: 150px 0;
 }
+
+.bg-transparent.scrolled {
+    background: var(--color-main) !important;
+}
+
+/* .scrolled {
+    background: var(--font-light) !important;
+    transition: 500ms linear;
+} */
+
+/* .navbar a {
+    color: var(--font-light) !important;
+} */
+
+/* .navbar a.scrolled {
+    color: var(--font-dark) !important;
+}
+
+.nav-link span {
+    color: var(--font-light) !important;
+} */
+
+
 
 @media (min-width: 576px) {
     .navbar-expand-sm .navbar-nav .nav-link {
@@ -29,28 +75,46 @@ section {
     border-radius: 40px;
     display: inline-block;
     transition: ease all 0.2s;
-    color: black;
+    color: var(--font-light);
     font-weight: 500;
     font-size: 16px;
 }
 
 .main-header .navbar-nav > li > .nav-link.active span {
-    background: var(--color-main);
-    color: white;
+    color: gold;
 }
 
 .main-header .navbar-nav > li:hover > a span {
-    background-color: var(--color-main);
-    color: white;
+    color: gold;
+}
+
+/* Home Banner */
+.home-banner {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: var(--font-light);
 }
 
 .home-banner h1 {
-    color: var(--font-dark);
+    color: var(--font-light);
     font-family: 'Source Code Pro', monospace;
     position: relative;
+    transform: translateY(3rem);
+    opacity: 0;
+    animation: fadeInUp 2s ease 1s forwards;
 }
 
-.home-banner h1::before,
+.custom-toggle {
+    border: none;
+    color: var(--font-light) !important;
+}
+
+.custom-toggle:focus {
+    outline: none;
+}
+
+/* .home-banner h1::before,
 .home-banner h1::after {
     content: '';
     position: absolute;
@@ -61,25 +125,26 @@ section {
 }
 
 .home-banner h1::before {
-    background: var(--color-alt);
+    background: initial;
     animation: typewriter var(--typewriterSpeed) steps(14) 1s forwards;
 }
 
 .home-banner h1::after {
     width: 0.125em;
-    background: black;
+    background: var(--font-light);
     animation: 
         typewriter var(--typewriterSpeed) steps(14) 1s forwards,
-        blink 750ms steps(14) infinite
-}
+        blink 750ms steps(14) infinite;
+} */
 
 .subtitle {
     margin-top: 20px;
     opacity: 0;
     transform: translateY(3rem);
-    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+    animation: fadeInUp 2s ease 4s forwards;
 }
 
+/* Keyframes for header animations */
 @keyframes typewriter {
     to {
         left: 100%;
@@ -98,3 +163,53 @@ section {
         transform: translateY(0);
     }
 }
+
+/* Hamburger Icon */
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  .menu-btn__burger {
+    transition: all .2s ease-in-out;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--font-light);
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateY(-5px);
+  }
+
+  .menu-btn__burger::after {
+    transform: translateY(5px);
+  }
+
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }

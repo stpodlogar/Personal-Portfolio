@@ -1,3 +1,5 @@
+
+// Smooth Scroll
 (function($) {
   "use strict"; // Start of use strict
 
@@ -15,15 +17,43 @@
     }
   });
 
-  // Closes responsive menu when a scroll trigger link is clicked
+  // Closes responsive menu when a scroll trigger link is clicked and hamburger
   $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
+    menuBtn.classList.remove('open');
+    menuOpen = false;
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#main-nav',
-    offset: 66
+    offset: 72
   });
 
 })(jQuery); // End of use strict
+
+// $(window).scroll(function() {
+//   if ($(window).scrollTop() > 0) {
+//     console.log("scrolled");
+//     $('.bg-transparent').css("background-color", "#fff !important");
+//   };
+// });
+
+$(window).scroll(function() {
+  $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
+});
+
+// Hamburger Icon animation
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+});
+
