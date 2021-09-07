@@ -38,4 +38,32 @@ $(window).scroll(function() {
   $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
 });
 
+// Dark Mode Functionality
+const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleIcon = document.querySelector('#toggle-icon');
+
+function darkMode() {
+  toggleIcon.children[0].textContent = 'Dark Mode';
+  toggleIcon.children[1].classList.remove('fa-sun');
+  toggleIcon.children[1].classList.add('fa-moon');
+}
+
+function lightMode() {
+  toggleIcon.children[0].textContent = 'Light Mode';
+  toggleIcon.children[1].classList.remove('fa-moon');
+  toggleIcon.children[1].classList.add('fa-sun');
+}
+
+function switchTheme(event) {
+  if (event.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    darkMode();
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    lightMode();
+  }
+  console.log(event.target.checked);
+}
+// Event Listener
+toggleSwitch.addEventListener('change', switchTheme);
 
