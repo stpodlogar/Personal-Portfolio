@@ -67,6 +67,9 @@ section {
     position: absolute;
     top: 30px;
     right: 25px;
+    transform: translateX(1rem);
+    opacity: 0;
+    animation: fadeFromRight 1s ease 2s forwards;
 }
 
 .theme-switch-wrapper span {
@@ -252,6 +255,13 @@ input:checked + .slider:before {
 @keyframes rotateArrow {
     to {
         transform: rotatez(90);
+    }
+}
+
+@keyframes fadeFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
