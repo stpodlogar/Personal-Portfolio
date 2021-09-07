@@ -68,7 +68,7 @@ section {
     top: 30px;
     right: 25px;
     opacity: 0;
-    animation: fadeIn 1s ease 2s forwards;
+    animation: fadeIn 0.5s ease 2s forwards;
 }
 
 .theme-switch-wrapper span {
