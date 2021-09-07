@@ -42,27 +42,21 @@ $(window).scroll(function() {
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.querySelector('#toggle-icon');
 
-function darkMode() {
-  toggleIcon.children[0].textContent = 'Dark Mode';
-  toggleIcon.children[1].classList.remove('fa-sun');
-  toggleIcon.children[1].classList.add('fa-moon');
-}
-
-function lightMode() {
-  toggleIcon.children[0].textContent = 'Light Mode';
-  toggleIcon.children[1].classList.remove('fa-moon');
-  toggleIcon.children[1].classList.add('fa-sun');
+function toggleDarkLightMode(isDark) {
+  toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
+  isDark ? toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon') :
+    toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
 }
 
 function switchTheme(event) {
   if (event.target.checked) {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
-    darkMode();
+    toggleDarkLightMode(true);
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
-    lightMode();
+    toggleDarkLightMode(false);
   }
 }
 // Event Listener
@@ -75,7 +69,7 @@ if (currentTheme) {
 
   if (currentTheme === 'dark') {
     toggleSwitch.checked = true;
-    darkMode();
+    toggleDarkLightMode(true);
   }
 }
 
