@@ -16,23 +16,7 @@
       }
     }
   });
-
-  // Closes responsive menu when a scroll trigger link is clicked and hamburger
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#main-nav',
-    offset: 0
-  });
-
 })(jQuery); // End of use strict
-
-// $(window).scroll(function() {
-//   if ($(window).scrollTop() > 0) {
-//     console.log("scrolled");
-//     $('.bg-transparent').css("background-color", "#fff !important");
-//   };
-// });
 
 $(window).scroll(function() {
   $('nav').toggleClass('scrolled', $(this).scrollTop() > 0);
