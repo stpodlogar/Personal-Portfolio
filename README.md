@@ -1,2 +1,2 @@
 # Personal-Portfolio
-Personal Portfolio for my software development projects
+Personal Portfolio for my software development projects.
