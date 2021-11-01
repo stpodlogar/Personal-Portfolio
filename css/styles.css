@@ -207,7 +207,7 @@ input:checked + .slider:before {
     color: var(--primary-variant);
 }
 
-.cta-btn--resume {
+.cta-btn--resume, .cta-btn--email {
     border: 2px solid var(--on-primary);
     color: var(--on-primary);
 }
@@ -227,7 +227,7 @@ input:checked + .slider:before {
     outline: none;
 }
 
-.cta-btn--resume:hover {
+.cta-btn--resume:hover, .cta-btn--email:hover {
     color: var(--primary-variant);
     background-color: var(--on-primary);
     transform: translateX(0);
@@ -290,14 +290,7 @@ input:checked + .slider:before {
 
 footer {
     background-color: #2a363a;
-}
-
-footer hr {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    border: 0;
-    width: 50%;
-    border-top: 2px solid hsla(0,0%,100%,.1);
+    position: relative;
 }
 
 .back-to-top a {
@@ -305,8 +298,10 @@ footer hr {
     margin: auto;
     color: var(--on-primary);
     font-size: 1.25rem;
-    margin-bottom: 15px;
     transition: all 0.2s ease-in;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
 }
 
 .back-to-top a:hover {
