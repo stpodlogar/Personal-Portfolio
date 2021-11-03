@@ -26,11 +26,8 @@ a, a:active, a:hover, a:link, a:visited {
     text-decoration: none;
 }
 
-.blob {
-    opacity: 50%;
-    z-index: -999;
-    position: relative;
-    top: 0;
+.modal-content {
+    background-color: var(--background);
 }
 
 #hero-container {
