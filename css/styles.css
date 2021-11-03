@@ -30,6 +30,24 @@ a, a:active, a:hover, a:link, a:visited {
     background-color: var(--background);
 }
 
+.image-info {
+    background: #d0e8f5;
+    border: 1px solid #173DB9;
+    padding: 1em 0;
+    color: #2a363a;
+    line-height: 1.5em;
+    padding: 1em;
+}
+
+.image-info i {
+    color: #173DB9;
+}
+
+hr {
+    background: var(--on-background);
+    margin-bottom: 2em;
+}
+
 #hero-container {
     position: relative;
     /* background-position: center;
