@@ -3,7 +3,8 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Stephen Podlogar's official personal website. Here you can view Stephen's software development projects."
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +47,7 @@
         <h1>Hello, my name is <span class="highlight">Stephen Podlogar.</span><br>I'm a Web Developer.</h1>
       </div>
       <div class="hero-cta">
-        <a class="js-scroll-trigger cta-btn cta-btn--hero" href="#about">Know more<span><i class="fas fa-arrow-right"></i></span></a>
+        <a class="cta-btn cta-btn--hero" href="#about">Know more<span><i class="fas fa-arrow-right"></i></span></a>
       </div>
     </div>
     <!-- About Section -->
@@ -55,7 +56,7 @@
         <h1 class="text-center mb-5 mt-0 section-title">About Me</h1>
         <div class="about-wrapper row">
           <div class="col-md-6 col-sm-12 mb-4 text-center">
-            <img src="https://stpodlog-portfolio.s3.us-east-2.amazonaws.com/IMG_4236.jpg" style="width: 300px;" alt="Personal Photo">
+            <img src="https://stpodlog-portfolio.s3.us-east-2.amazonaws.com/Podlogar-Headshot.jpg" style="width: 300px; border-radius: 50%" alt="Personal Photo">
           </div>
           <div class="col-md-6 col-sm-12 text-center text-md-start">
             <p>Ever since writing my first line of code in high school, I have been hooked. I’ve always been a curious individual who is fascinated in learning how things work and why they work a certain way. As a child, I remember taking apart my toys and trying to reassemble them, just for the fun of it. Software development has allowed me to foster this excitement for learning and building things for myself, as well as others. </p>
@@ -71,7 +72,7 @@
         <h1 class="text-center mb-5 mt-0 section-title">Projects</h1>
         <article class="row">
           <div class="col-lg-4 col-sm-12 mb-5">
-            <h3>Pepper Equipment Rental</h3>
+            <h2>Pepper Equipment Rental</h2>
             <div>
               <p>An internal web application that allowed construction workers to order supplies and equipment to a jobsite. Connected to Pepper's current enterprise software system CMiC, to dynamically load items. Built with C#, JavaScript, and ASP.NET Core MVC Framework.</p>
               <button type="button" class="cta-btn cta-btn--hero" style="line-height: unset" data-bs-toggle="modal" data-bs-target="#projectModal">
@@ -85,7 +86,7 @@
         </article>
         <article class="row">
           <div class="col-lg-4 col-sm-12 mb-5">
-            <h3>KeyForecast Weather</h3>
+            <h2>KeyForecast Weather</h2>
             <div>
               <p>KeyForecast displays the current weather, an hourly forecast, and a 7-day forecast for a desired location. Data is sourced from OpenWeather API. Built using HTML5, CSS3, and JavaScript.</p>
               <a href="https://stpodlogar.github.io/KeyForecast-Weather/" rel="noopener norefferer" target="_blank" class="cta-btn cta-btn--hero">See Live</a>
@@ -98,7 +99,7 @@
         </article>
         <article class="row">
           <div class="col-lg-4 col-sm-12 mb-5">
-            <h3>Face Recognition</h3>
+            <h2>Face Recognition</h2>
             <div>
               <p>This web application allows a user to create an account and detect faces in an image. The application uses the Clarifai API to provide coordinates for the detected face. Built using React, NodeJS, Express, and CSS3.</p>
               <a href="https://facial-recognition-ai.herokuapp.com/" rel="noopener norefferer" target="_blank" class="cta-btn cta-btn--hero">See Live</a>
@@ -159,17 +160,17 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h4 class="text-center mb-5 mt-0 section-title">Connect</h4>
+        <h1 class="text-center mb-5 mt-0 section-title">Connect</h1>
         <div class="container text-center">
           <a class="cta-btn cta-btn--email" href="mailto:stpodlogar@gmail.com">
             <i class="fas fa-envelope pr-2"></i>
             stpodlogar@gmail.com
           </a>
           <div class="media-links">
-            <a href="https://www.linkedin.com/in/stephenpodlogar/" rel="noopener norefferer" target="_blank">
+            <a href="https://www.linkedin.com/in/stephenpodlogar/" rel="noopener norefferer" target="_blank" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/stpodlogar" rel="noopener norefferer" target="_blank">
+            <a href="https://github.com/stpodlogar" rel="noopener norefferer" target="_blank" aria-label="Github">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -180,7 +181,7 @@
     <footer class="py-3 flex">
       <p class="m-0 text-center text-white">&copy; 2021 Stephen Podlogar</p>
       <span class="back-to-top">
-        <a href="#page-top" class="js-scroll-trigger media-links">
+        <a href="#page-top" class="media-links" aria-label="To top of page">
           <i class="fas fa-chevron-up text-center"></i>
         </a>
       </span>
