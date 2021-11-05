@@ -3,8 +3,6 @@ const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const toggleIcon = document.querySelector('#toggle-icon');
 const closeBtn = document.querySelector('.btn-close');
 
-console.log(closeBtn);
-
 function toggleDarkLightMode(isDark) {
   toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
   if (isDark) {
