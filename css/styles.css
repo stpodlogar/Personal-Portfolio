@@ -5,6 +5,7 @@
     --on-background: rgb(66 66 66);
     --on-background-alt: rgb(66 66 66 / 70%);
     --background: rgb(255 255 255);
+    --btn-hover: #f0f0f0;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
     --on-background: rgb(255 255 255 / 90%);
     --on-background-alt: rgb(255 255 255 / 70%);
     --background: #2a363a;
+    --btn-hover: #222b2f;
 }
 
 html {
@@ -210,6 +212,10 @@ input:checked + .slider:before {
     transition: 300ms;
     color: var(--primary-variant);
     background-color: transparent;
+    border-radius: 0.25em;
+    border: 2px solid transparent;
+    margin-right: 0.25em;
+    line-height: unset;
 }
 
 .cta-btn--hero {
@@ -222,19 +228,24 @@ input:checked + .slider:before {
     color: var(--on-primary);
 }
 
-.cta-btn:hover {
+.cta-btn:focus-visible {
+    outline: orange solid 2px !important;
+    outline-offset: 0.1em;
+}
+
+.cta-btn:hover, .cta-btn:focus-visible {
     cursor: pointer;
     text-decoration: none;
     color: var(--primary-variant);
-    transform: translateX(0.25rem);
+    background-color: var(--btn-hover);
+    /* transform: translateX(0.25rem); */
 }
 
-.cta-btn--hero:hover, .cta-btn--hero:focus {
+.cta-btn--hero:hover, .cta-btn--hero:focus-visible {
     color: var(--on-primary);
     border-color: var(--primary-variant);
     background-color: var(--primary-variant);
     transform: translateX(0);
-    outline: none;
 }
 
 .cta-btn--resume:hover, .cta-btn--email:hover {
