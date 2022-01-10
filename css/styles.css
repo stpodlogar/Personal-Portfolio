@@ -259,7 +259,7 @@ input:checked + .slider:before {
     transition: transform 300ms;
 }
 
-.cta-btn:hover .fa-arrow-right {
+.hero-cta > .cta-btn:hover .fa-arrow-right {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
