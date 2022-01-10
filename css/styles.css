@@ -246,7 +246,7 @@ input:checked + .slider:before {
     background-color: var(--primary-variant);
 }
 
-.cta-btn--resume:hover, .cta-btn--email:hover {
+.cta-btn--resume:hover, .cta-btn--resume:focus, .cta-btn--email:hover, .cta-btn--email:focus {
     color: var(--primary-variant);
     background-color: var(--on-primary);
 }
