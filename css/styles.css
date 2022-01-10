@@ -240,7 +240,7 @@ input:checked + .slider:before {
     outline-offset: 0.1em;
 }
 
-.cta-btn:hover, .cta-btn:focus-visible {
+.cta-btn:hover, .cta-btn:focus, .cta-btn:focus-visible {
     cursor: pointer;
     text-decoration: none;
     color: var(--primary-variant);
@@ -248,7 +248,7 @@ input:checked + .slider:before {
     /* transform: translateX(0.25rem); */
 }
 
-.cta-btn--hero:hover, .cta-btn--hero:focus-visible {
+.cta-btn--hero:hover, .cta-btn--hero:focus, .cta-btn--hero:focus-visible {
     color: var(--on-primary);
     border-color: var(--primary-variant);
     background-color: var(--primary-variant);
