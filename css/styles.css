@@ -202,13 +202,13 @@ input:checked + .slider:before {
     color: var(--on-primary) !important;
 }
 
-.custom-toggle:focus {
+/* .custom-toggle:focus {
     outline: none;
-}
+} */
 
 :focus-visible {
-    outline: orange solid 1px;
-    outline-offset: 1px;
+    outline: orange solid 2px !important;
+    outline-offset: 2px;
 }
 
 .cta-btn {
